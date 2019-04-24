@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+  <servlet>
+    <servlet-name>MainPort</servlet-name>
+    <servlet-class>departments.Main</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>EmpDaoPort</servlet-name>
+    <servlet-class>com.dao.EmpDao</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MainPort</servlet-name>
+    <url-pattern>/MainPort</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmpDaoPort</servlet-name>
+    <url-pattern>/EmpDaoPort</url-pattern>
+  </servlet-mapping>
+</web-app>
